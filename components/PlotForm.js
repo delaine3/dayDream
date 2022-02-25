@@ -79,7 +79,6 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
           Math.floor(Math.random() * random_idea.length)
         ];
       }
-      console.log(value)
 
     setForm({
       ...form,
