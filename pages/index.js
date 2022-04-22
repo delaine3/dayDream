@@ -61,7 +61,7 @@ const Index = ({ characters }) => (
         </ul>
       </div>
       </div>
-<p>Attribution</p>
+<p>Image Attribution</p>
 <a href="https://www.vecteezy.com/free-vector/writing">Writing Vectors by Vecteezy</a>
 <a href="https://www.vecteezy.com/free-vector/animals">Animals Vectors by Vecteezy</a>
 <a href="https://www.vecteezy.com/free-vector/story">Story Vectors by Vecteezy</a>
