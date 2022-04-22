@@ -43,7 +43,7 @@ const Index = ({ characters }) => (
               {" "}
               <Link className="nav-link" href="/writing_excercises"><a>
               <img
-                src="https://www.vecteezy.com/vector-art/214921-workplace-with-typewriter-illustration"
+                src="https://static.vecteezy.com/system/resources/previews/002/059/329/large_2x/yellow-pencil-writing-on-paper-free-vector.jpg"
                 border="0"
                 className="writing-excercises-icons"
                 width="100px"
