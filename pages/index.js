@@ -43,7 +43,7 @@ const Index = ({ characters }) => (
               {" "}
               <Link className="nav-link" href="/writing_excercises"><a>
               <img
-                src="https://www.vecteezy.com/vector-art/4273485-write-in-notes-decorate-your-notes-with-stickers"
+                src="https://www.vecteezy.com/vector-art/214921-workplace-with-typewriter-illustration"
                 alt="kissclipart-writing-clipart-writing-clip-art-a65c8cdd6316233b"
                 border="0"
                 className="writing-excercises-icons"
@@ -59,7 +59,7 @@ const Index = ({ characters }) => (
           </li>
         </ul>
       </div>
-<a href="https://www.vecteezy.com/free-vector/write">Write Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/writing">Writing Vectors by Vecteezy</a>
 <a href="https://www.vecteezy.com/free-vector/animals">Animals Vectors by Vecteezy</a>
 <a href="https://www.vecteezy.com/free-vector/story">Story Vectors by Vecteezy</a>
         </div>
