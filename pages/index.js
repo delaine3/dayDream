@@ -4,8 +4,8 @@ import Character from '../models/Writing_Excercise'
 
 const Index = ({ characters }) => (
   <>
+     <div>
      <div className="nav">
-            <div>
 
           <div className="center nav-writing-exc">
       
