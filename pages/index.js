@@ -5,6 +5,8 @@ import Character from '../models/Writing_Excercise'
 const Index = ({ characters }) => (
   <>
      <div className="nav">
+            <div>
+
           <div className="center nav-writing-exc">
       
         <ul className="writing-excercises-grid">
@@ -58,6 +60,8 @@ const Index = ({ characters }) => (
           </li>
         </ul>
       </div>
+      </div>
+
 <a href="https://www.vecteezy.com/free-vector/writing">Writing Vectors by Vecteezy</a>
 <a href="https://www.vecteezy.com/free-vector/animals">Animals Vectors by Vecteezy</a>
 <a href="https://www.vecteezy.com/free-vector/story">Story Vectors by Vecteezy</a>
