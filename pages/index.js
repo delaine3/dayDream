@@ -14,7 +14,7 @@ const Index = ({ characters }) => (
             <a>
               {" "}
               <img
-                src="https://i.ibb.co/hC0GtCt/charachter.jpg"
+                src="https://static.vecteezy.com/system/resources/previews/005/161/959/large_2x/cartoon-wild-animals-in-the-jungle-free-vector.jpg"
                 alt="charachter"
                 width="100px"
                 className="writing-excercises-icons"
@@ -29,7 +29,7 @@ const Index = ({ characters }) => (
             <a>
               {" "}
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtD-UFzDMMtNcvYN6Qr9S6DyjjvUr7VRXAgQ&usqp=CAU"
+                src="https://static.vecteezy.com/system/resources/previews/000/142/632/large_2x/princesa-story-cartoon-free-vector.jpg"
                 alt="plot"
                 width="100px"
                 className="writing-excercises-icons"
@@ -43,7 +43,7 @@ const Index = ({ characters }) => (
               {" "}
               <Link className="nav-link" href="/writing_excercises"><a>
               <img
-                src="https://i.ibb.co/0Zn2VC3/kissclipart-writing-clipart-writing-clip-art-a65c8cdd6316233b.png"
+                src="https://www.vecteezy.com/vector-art/4273485-write-in-notes-decorate-your-notes-with-stickers"
                 alt="kissclipart-writing-clipart-writing-clip-art-a65c8cdd6316233b"
                 border="0"
                 className="writing-excercises-icons"
@@ -59,6 +59,9 @@ const Index = ({ characters }) => (
           </li>
         </ul>
       </div>
+<a href="https://www.vecteezy.com/free-vector/write">Write Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/animals">Animals Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/story">Story Vectors by Vecteezy</a>
         </div>
   </>
 )
