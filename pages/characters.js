@@ -32,11 +32,12 @@ const Index = ({ characters }) => (
             </div>
           </div>
         </div>
-        <a href="https://www.vecteezy.com/free-vector/black-woman">Black Woman Vectors by Vecteezy</a>
       </div>
       
     ))}
   </div>
+          <a href="https://www.vecteezy.com/free-vector/black-woman">Black Woman Vectors by Vecteezy</a>
+
   </div>
 )
 
