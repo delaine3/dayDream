@@ -8,7 +8,8 @@ Technologies used:
 - ReactJS
 - NodeJS
 - NextJS
-- 
+
+[Go to Live App](https://day-dream.vercel.app/)
 ## Getting Started
 
 First, run the development server:
