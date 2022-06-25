@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { mutate } from 'swr'
-import { random_writing_exercise_list } from '../lib/writingExcercisesList'
 import { Form, TextArea } from 'semantic-ui-react'
 import { random_idea } from '../lib/plotIdeas'
 
