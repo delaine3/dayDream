@@ -2,6 +2,7 @@ import '../css/style.css'
 import '../css/form.css'
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from "../components/navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,19 +10,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Story Book App</title>
       </Head>
+      <Navbar  />
 
-      <div className="top-bar">
-          <Link href="/">
-          <div className="home">
-
-            <a>Home</a>
-            </div>
-          </Link>
-         
-       
-        
-
-      </div>
       <div className="grid wrapper ">
         <Component {...pageProps} />
       </div>

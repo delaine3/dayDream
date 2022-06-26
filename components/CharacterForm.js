@@ -135,11 +135,11 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
           required
         />
 
-        <label htmlFor="places_lived">Places Lived</label>
+        <label htmlFor="places-lived">Places Lived</label>
         <input
           type="text"
           maxLength="20"
-          name="places_lived"
+          name="places-lived"
           value={form.places_lived}
           onChange={handleChange}
           required
