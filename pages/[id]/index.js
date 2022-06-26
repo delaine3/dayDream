@@ -22,11 +22,13 @@ const PetPage = ({ character }) => {
 
   return (
     <div key={character._id}>
-      <div>
+      <div className="char-img">
         <img className="view-card-img" src={character.image_url} />
+        <div className="btn-container" ><button className="btn delete" onClick={handleDelete}>
+          Delete
+        </button></div>
       </div>
-      <br />
-      <div className="view-card">
+      <div className="view-card-writ">
         <div>
           <p className="label charachter_name">
             Character name:
@@ -60,52 +62,70 @@ const PetPage = ({ character }) => {
             </span>
           </p>
           <div className="diet info">
-            <p className="label">Diet:</p>
-            <ul>
-              {character.diet.map((data, index) => (
-                <li key={index}>{data} </li>
-              ))}
-            </ul>
+            <p className="label">
+              Diet:
+              <span className="char-info">
+                <ul>
+                  {character.diet.map((data, index) => (
+                    <li key={index}>{data} </li>
+                  ))}
+                </ul>
+              </span>
+            </p>
           </div>
           <div className="insecurities info">
-            <p className="label">Insecurities:</p>
-            <ul>
-              {character.insecurities.map((data, index) => (
-                <li key={index}>{data} </li>
-              ))}
-            </ul>
+            <p className="label">
+              Insecurities:
+              <span className="char-info">
+                <ul>
+                  {character.insecurities.map((data, index) => (
+                    <li key={index}>{data} </li>
+                  ))}
+                </ul>
+              </span>
+            </p>
           </div>
 
           <div className="securities info">
-            <p className="label">Securities</p>
-            <ul>
-              {character.securities.map((data, index) => (
-                <li key={index}>{data} </li>
-              ))}
-            </ul>
+            <p className="label">
+              Securities
+              <span className="char-info">
+                <ul>
+                  {character.securities.map((data, index) => (
+                    <li key={index}>{data} </li>
+                  ))}
+                </ul>
+              </span>
+            </p>
           </div>
           {/* Extra Character Info: Likes and Dislikes */}
           <div className="likes info">
-            <p className="label">Likes</p>
-            <ul>
-              {character.likes.map((data, index) => (
-                <li key={index}>{data} </li>
-              ))}
-            </ul>
+            <p className="label">
+              Likes
+              <span className="char-info">
+                <ul>
+                  {character.likes.map((data, index) => (
+                    <li key={index}>{data} </li>
+                  ))}
+                </ul>
+              </span>
+            </p>
           </div>
           <div className="dislikes info">
-            <p className="label">Dislikes</p>
-            <ul>
-              {character.dislikes.map((data, index) => (
-                <li key={index}>{data} </li>
-              ))}
-            </ul>
+            <p className="label">
+              Dislikes
+              <span className="char-info">
+                <ul>
+                  {character.dislikes.map((data, index) => (
+                    <li key={index}>{data} </li>
+                  ))}
+                </ul>
+              </span>
+            </p>
           </div>
         </div>
       </div>
-      <button className="btn delete" onClick={handleDelete}>
-            Delete
-          </button>
+
       {message && <p>{message}</p>}
     </div>
   );

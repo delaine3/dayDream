@@ -37,8 +37,8 @@ const Index = ({ characters }) => (
     ))}
   </div>
   <br/>
-  <p>Image Attribution   <a href="https://www.vecteezy.com/free-vector/black-woman">Black Woman Vectors by Vecteezy</a>
-</p>
+  <div id='atrribution' >Image Attribution   <a href="https://www.vecteezy.com/free-vector/black-woman">Black Woman Vectors by Vecteezy</a></div>
+
 
   </div>
 )

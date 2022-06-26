@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 html,
 body {
@@ -6,7 +6,11 @@ body {
   height: 100%;
   padding: 0px;
   overflow-x: hidden;
-  background-image: radial-gradient(rgb(177, 165, 250) , rgb(13, 245, 253) , rgb(0, 140, 255) );
+  background-image: radial-gradient(
+    rgb(177, 165, 250),
+    rgb(13, 245, 253),
+    rgb(0, 140, 255)
+  );
   background-size: 100vw;
   margin: 0px;
   font-family: "Montserrat", sans-serif;
@@ -14,9 +18,8 @@ body {
   background-repeat: no-repeat;
 }
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
-
 }
 nav {
   display: inline;
@@ -28,6 +31,7 @@ nav {
   height: 50px;
 }
 nav a {
+  top: 0px;
   font-size: 20px;
   padding: 11px;
   border-right: #fdbeff solid 1px;
@@ -44,15 +48,12 @@ nav a:hover {
   top: 0px;
   width: 100%;
 }
-h1.delaine {
-  font-size: 47px;
-  margin: 33px;
-}
+
 .writing-excercises-icon-descriptor {
   font-size: 20px;
   float: center;
   margin-top: auto;
-  display:flexbox;
+  display: flexbox;
   width: 50%;
 }
 .writing-excercises-icons {
@@ -74,38 +75,22 @@ h1.delaine {
   margin: auto;
 }
 
-
 #title {
   position: absolute;
-  left: 20px;
+  left: 200px;
   top: 0;
   display: inline-block;
   height: 100%;
 }
 
-.nav {
-  height: 100%;
-  display: inline-block;
-  float: right;
-}
-.home:hover{
-  margin:auto;
+.home:hover {
+  margin: auto;
 
   border: 2px solid rgb(226, 43, 195);
   box-shadow: 0 0 10px 5px rgb(226, 43, 226);
-padding: 1%;
+  padding: 1%;
   border-radius: 12px;
   background-color: rgb(207, 168, 243);
-}
-
-.nav a {
-  margin-left: 10%;
-  margin-top: 16%;
-  font-size: 120%;
-  height: 100%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .grid {
@@ -163,25 +148,23 @@ padding: 1%;
   pointer-events: none;
   transition: 0.5s all;
 }
-.newForm{
+.newForm {
   background-color: rgba(240, 255, 255, 0.705);
   padding: 20px;
   border-radius: 10px;
-
 }
-.newFormButton{
+.newFormButton {
   margin: 1%;
-  float:center;
+  float: center;
   padding: 5px;
   background-color: #2afd2abb;
   box-shadow: 0 0 5px 5px #f1f1f1c5;
   border-radius: 10px;
-  font-size: 125%;
-
+  font-size:25px;
 }
-.newFormButton:hover{
+.newFormButton:hover {
   margin: 1%;
-  float:center;
+  float: center;
   padding: 10px;
   background-color: #24d8abf5;
   border: 2px solid #ffffff;
@@ -197,7 +180,14 @@ padding: 1%;
   font-weight: bold;
   font-size: 130%;
 }
-
+img {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+.img-container {
+  width: 40%;
+}
 h5.character-charachter_name {
   color: white;
   position: absolute;
@@ -232,7 +222,7 @@ li {
   margin: 10px;
 }
 
-#nameIdea{
+#nameIdea {
   padding: 15px;
   background-color: #58ecff8e;
   border: 2px solid #42b0becc;
@@ -259,7 +249,6 @@ li {
   color: white;
 }
 
-
 /* Delete Character */
 .character-container {
   width: 100%;
@@ -269,20 +258,25 @@ li {
   display: block;
 }
 
-.char-info{
+.char-info {
   font-weight: lighter;
-  margin-right:20px ;
+  margin-right: 20px;
 }
 
-.blurb{
-  margin:20px;
+.blurb {
+  margin: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-
+.view-card-img- {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 /* Styles for view-Cards */
 .view-card {
   background-color: rgb(254, 149, 240);
@@ -290,7 +284,7 @@ li {
   overflow-x: hidden;
   width: 500px;
   height: 50%;
-  overflow:scroll;
+  overflow: scroll;
   border: 1.25px solid rgb(119, 113, 113);
   border-radius: 16px;
   margin: auto;
@@ -304,8 +298,8 @@ li {
   /* transform: rotateY(180deg) translate(20px, 20px);
   background: pink; */
 }
-.view-card p{
-margin: 10px;
+.view-card p {
+  margin: 10px;
 }
 .view-card:hover .main-content {
   pointer-events: initial;
@@ -324,15 +318,12 @@ margin: 10px;
   justify-content: center;
 }
 
-.writing-exc{
+.writing-exc {
   width: 200px;
 }
-.shoppinglist-items {
-  background-color: #f9da84;
-}
-
 a {
   text-decoration: none;
+  text-align: center;
 }
 
 h1,
@@ -362,7 +353,6 @@ h2 {
   height: 100%;
 }
 
-
 .info ul {
   padding: 10px;
   padding-top: 0px;
@@ -382,31 +372,46 @@ li {
 
 .label {
   font-weight: bold;
+  text-align: center;
 }
 
 .btn-container {
   display: flex;
   text-align: right;
 }
-
+.char-img {
+  display: inline-block;
+}
 .btn {
   cursor: pointer;
   border: 1.5px solid var(--accent);
   color: #333;
   border-radius: 10px;
-  padding: 10px 15px;
+  padding: 5px;
   font-size: 90%;
   letter-spacing: 1px;
   transition: 0.5s all;
   border: 2px solid #333;
-  box-shadow: 0px 0px 5px #333, inset 0px 0px 2px #333;
 }
+.container {
+  display: flex; /* or inline-flex */
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
 
+  width: 50%;
+}
+#atrribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px 0px 5px #333, inset 0px 0px 2px #333;
+background-color: #acb8d154;
+}
 .btn:hover {
   background-color: rgba(230, 182, 182, 0.699);
 }
 .open.btn:hover {
-
   background-color: #fc26ea93;
 }
 .button {
@@ -418,10 +423,9 @@ li {
   margin: 10px;
 }
 .open.btn {
-
   --accent: #f783b9;
   outline: solid 2px #e213c6;
-background-color: #fc26ceb6;
+  background-color: #fc26ceb6;
   margin: 10px;
 }
 .delete.btn {
@@ -430,16 +434,15 @@ background-color: #fc26ceb6;
   margin: 10px;
 }
 
-.submit.btn{
+.submit.btn {
   --accent: #f783ed;
   outline: solid 2px #cf4eba;
   margin: 10px;
   background-color: #f783ed;
 }
-.submit.btn:hover{
+.submit.btn:hover {
   padding: 3%;
   outline: solid 2px #ffffff;
-
 }
 /* Styles for Cards */
 .view-card-writ {
@@ -450,22 +453,18 @@ background-color: #fc26ceb6;
   margin: 10px;
   background-color: rgba(255, 255, 255, 0.801);
   position: relative;
+  overflow-x: hidden;
   font-size: 100%;
 }
 
 .view-card-writ:hover {
   box-shadow: 0 0 10px 5px rgba(201, 9, 175, 0.973);
-
 }
 
-p{
-  padding: 15px;
+p {
+  padding: 5px;
   background-color: rgba(240, 255, 255, 0.699);
   border: 2px solid #ffffff;
   box-shadow: 0 0 5px 5px #f1f1f1c5;
   border-radius: 10px;
 }
-
-
-
-
