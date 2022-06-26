@@ -49,7 +49,7 @@ const Index = ({ characters }) => (
         </a>
       </Link>
     </div>
-    <p>
+    <div>
       Image Attribution <br/>
       <a href="https://www.vecteezy.com/free-vector/writing">
         Writing Vectors by Vecteezy
@@ -60,7 +60,7 @@ const Index = ({ characters }) => (
       <a href="https://www.vecteezy.com/free-vector/story">
         Story Vectors by Vecteezy
       </a>
-    </p>
+    </div>
   </>
 );
 
