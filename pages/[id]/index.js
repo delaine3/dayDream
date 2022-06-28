@@ -28,7 +28,7 @@ const PetPage = ({ character }) => {
           Delete
         </button></div>
       </div>
-      <div className="view-card-writ">
+      <div className="view-card-char">
         <div>
           <p className="label charachter_name">
             Character name:

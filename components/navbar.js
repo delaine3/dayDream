@@ -13,6 +13,7 @@ export default function Navbar() {
         <Link href="/characters">
           <a className="nav-link">Characters</a>
         </Link>{" "}
+        <h1 className="page-title">Story Book</h1>
 
       </nav>
     </div>

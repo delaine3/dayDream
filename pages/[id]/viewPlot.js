@@ -23,10 +23,7 @@ const PlotsPage = ({ plot }) => {
 
   return (
     <div key={plot._id}>
-      <div>
-        <img className="view-card-img" src={plot.image_url} />
-      </div>
-      <br />
+   
       <div>
         <div className="view-card-writ">
           <div>
