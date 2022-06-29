@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { useRouter } from 'next/router'
-import { mutate } from 'swr'
-import {name_list} from '../lib/nameIdeaList'
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { mutate } from "swr";
+import { name_list } from "../lib/nameIdeaList";
 const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
-  const router = useRouter()
-  const contentType = 'application/json'
-  const [errors, setErrors] = useState({})
-  const [message, setMessage] = useState('')
+  const router = useRouter();
+  const contentType = "application/json";
+  const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState("");
 
   const [form, setForm] = useState({
     charachter_name: characterForm.charachter_name,
@@ -22,109 +22,107 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
     birth_order: characterForm.birth_order,
     insecurities: characterForm.insecurities,
     securities: characterForm.securities,
-    nameIdea: characterForm.nameIdea
-  })
-
+    nameIdea: characterForm.nameIdea,
+  });
 
   /* The PUT method edits an existing entry in the mongodb database. */
   const putData = async (form) => {
-    const { id } = router.query
+    const { id } = router.query;
 
     try {
       const res = await fetch(`/api/characters/${id}`, {
-        method: 'PUT',
+        method: "PUT",
         headers: {
           Accept: contentType,
-          'Content-Type': contentType,
+          "Content-Type": contentType,
         },
         body: JSON.stringify(form),
-      })
+      });
 
       // Throw error with status code in case Fetch API req failed
       if (!res.ok) {
-        throw new Error(res.status)
+        throw new Error(res.status);
       }
 
-      const { data } = await res.json()
+      const { data } = await res.json();
 
-      mutate(`/api/characters/${id}`, data, false) // Update the local data without a revalidation
-      router.push('/')
+      mutate(`/api/characters/${id}`, data, false); // Update the local data without a revalidation
+      router.push("/");
     } catch (error) {
-      setMessage('Failed to update character')
+      setMessage("Failed to update character");
     }
-  }
+  };
 
   /* The POST method adds a new entry in the mongodb database. */
   const postData = async (form) => {
     try {
-      const res = await fetch('/api/characters', {
-        method: 'POST',
+      const res = await fetch("/api/characters", {
+        method: "POST",
         headers: {
           Accept: contentType,
-          'Content-Type': contentType,
+          "Content-Type": contentType,
         },
         body: JSON.stringify(form),
-      })
+      });
 
       // Throw error with status code in case Fetch API req failed
       if (!res.ok) {
-        throw new Error(res.status)
+        throw new Error(res.status);
       }
 
-      router.push('/')
+      router.push("/");
     } catch (error) {
-      setMessage('Failed to add character')
+      setMessage("Failed to add character");
     }
-  }
+  };
 
   const handleChange = (e) => {
-    const target = e.target
+    const target = e.target;
     const value =
-      target.name === 'into_astrology' ? target.checked : target.value
-    const name = target.name
+      target.name === "into_astrology" ? target.checked : target.value;
+    const name = target.name;
 
-    if(name == "nameIdea"){
+    if (name == "nameIdea") {
       value = name_list[Math.floor(Math.random() * name_list.length)];
-
     }
 
     setForm({
       ...form,
       [name]: value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const errs = formValidate()
+    e.preventDefault();
+    const errs = formValidate();
     if (Object.keys(errs).length === 0) {
-      forNewCharacter ? postData(form) : putData(form)
+      forNewCharacter ? postData(form) : putData(form);
     } else {
-      setErrors({ errs })
+      setErrors({ errs });
     }
-  }
+  };
 
   /* Makes sure character info is filled for character charachter_name, places_lived charachter_name, birth_place, and image url*/
   const formValidate = () => {
-    let err = {}
-    if (!form.charachter_name) err.charachter_name = 'Name is required'
-    if (!form.places_lived) err.places_lived = 'Places lived is required'
-    if (!form.birth_place) err.birth_place = 'Species is required'
-    if (!form.image_url) err.image_url = 'Image URL is required'
-    return err
-  }
+    let err = {};
+    if (!form.charachter_name) err.charachter_name = "Name is required";
+    if (!form.places_lived) err.places_lived = "Places lived is required";
+    if (!form.birth_place) err.birth_place = "Species is required";
+    if (!form.image_url) err.image_url = "Image URL is required";
+    return err;
+  };
 
   return (
     <>
-      <form className='newForm' id={formId} onSubmit={handleSubmit}>
-            <p id="nameIdea">
-              {form.nameIdea != ""
-                ? form.nameIdea
-                : "Create your charachter. If you need a name idea click the button below!"}
-            </p>
-            <button name='nameIdea'  className="open btn" onClick={handleChange}>
-              Name Idea
-            </button>
+      <form className="newForm view" id={formId} onSubmit={handleSubmit}>
+        <p id="nameIdea">
+          {form.nameIdea != ""
+            ? form.nameIdea
+            : "Create your charachter. If you need a name idea click the button below!"}
+        </p>
+        <button name="nameIdea" className="open" onClick={handleChange}>
+          Name Idea
+        </button>
         <label htmlFor="charachter_name">Character Name</label>
         <input
           type="text"
@@ -164,7 +162,7 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
           onChange={handleChange}
           required
         />
-        
+
         <label htmlFor="birth_order">Birth Order (first born, last..etc)</label>
         <input
           type="text"
@@ -224,7 +222,7 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
           onChange={handleChange}
         />
 
-<label htmlFor="insecurities">Insecurities</label>
+        <label htmlFor="insecurities">Insecurities</label>
         <textarea
           name="insecurities"
           maxLength="60"
@@ -239,9 +237,7 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
           onChange={handleChange}
         />
 
-        <button type="submit" className="btn">
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
       <p>{message}</p>
       <div>
@@ -250,7 +246,7 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CharacterForm
+export default CharacterForm;

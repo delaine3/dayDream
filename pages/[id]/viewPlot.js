@@ -23,9 +23,8 @@ const PlotsPage = ({ plot }) => {
 
   return (
     <div key={plot._id}>
-   
       <div>
-        <div className="view-card-writ">
+        <div className="view">
           <div>
             <p className="label charachter_name">
               Prompt:<span className="char-info">{plot.plot_idea}</span>
@@ -35,9 +34,9 @@ const PlotsPage = ({ plot }) => {
             </p>
           </div>
           <Link href="/[id]/editPlot" as={`/${plot._id}/editPlot`}>
-            <button className="btn edit">Edit</button>
+            <button className="edit">Edit</button>
           </Link>
-          <button className="btn delete" onClick={handleDelete}>
+          <button className="delete" onClick={handleDelete}>
             Delete
           </button>
         </div>

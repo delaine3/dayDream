@@ -24,11 +24,7 @@ const WritingExcPage = ({ writing_excercise }) => {
   return (
     <div key={writing_excercise._id}>
       <div>
-        <img className="view-card-img" src={writing_excercise.image_url} />
-      </div>
-      <br />
-      <div>
-        <div className="view-card-writ">
+        <div className="view">
           <div>
             <p className="label charachter_name">
               Prompt:
@@ -42,17 +38,18 @@ const WritingExcPage = ({ writing_excercise }) => {
                 {writing_excercise.promt_text_area_contents}
               </span>
             </p>
-          </div>
-        </div>
-        <Link
+            <Link
           href="/[id]/editWritingExcercise"
           as={`/${writing_excercise._id}/editWritingExcercise`}
         >
-          <button className="btn edit">Edit</button>
+          <button className="edit">Edit</button>
         </Link>
-        <button className="btn delete" onClick={handleDelete}>
+        <button className="delete" onClick={handleDelete}>
           Delete
         </button>
+          </div>
+        </div>
+       
       </div>
       {message && <p>{message}</p>}
     </div>

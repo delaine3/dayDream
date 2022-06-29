@@ -21,10 +21,10 @@ const PetPage = ({ character }) => {
   };
 
   return (
-    <div key={character._id}>
+    <div   key={character._id}>
       <div className="char-img">
         <img className="view-card-img" src={character.image_url} />
-        <div className="btn-container" ><button className="btn delete" onClick={handleDelete}>
+        <div className="button-container" ><button className="delete" onClick={handleDelete}>
           Delete
         </button></div>
       </div>

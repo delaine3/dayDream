@@ -19,9 +19,9 @@ const Index = ({ characters }) => (
         <div key={character._id}>
           <div className="card">
             <img src={character.image_url} />
-            <h5 className="character-charachter_name">
+            <h2 className="character-charachter_name">
               {character.charachter_name}
-            </h5>
+            </h2>
             <div className="main-content">
               <p className="label charachter_name">
                 Character name:
@@ -31,12 +31,12 @@ const Index = ({ characters }) => (
                 Age:<span className="char-info">{character.age}</span>{" "}
               </p>
               {/* Extra Character Info: Likes and Dislikes */}
-              <div className="btn-container">
+              <div className="button-container">
                 <Link href="/[id]/edit" as={`/${character._id}/edit`}>
-                  <button className="btn edit">Edit</button>
+                  <button className="edit">Edit</button>
                 </Link>
                 <Link href="/[id]" as={`/${character._id}`}>
-                  <button className="btn view">View</button>
+                  <button className="view-btn">View</button>
                 </Link>
               </div>
             </div>

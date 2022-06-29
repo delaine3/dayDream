@@ -23,7 +23,7 @@ const Index = ({ writing_excercise }) => {
         <Link href="/newWritingExc">
           <button className="newFormButton">
             {" "}
-            <a>Add writing_excercise</a>{" "}
+            <a>Add writing excercise</a>{" "}
           </button>
         </Link>
       </h1>
@@ -32,7 +32,6 @@ const Index = ({ writing_excercise }) => {
         {writing_excercise.map((writing_excercise) => (
           <div id="my-card" key={writing_excercise._id}>
             <div className="view-card-writ">
-              <img src={writing_excercise.image_url} />
               <div>
                 <p className="label blurb ">
                   Prompt:{" "}
@@ -47,18 +46,18 @@ const Index = ({ writing_excercise }) => {
                   </span>{" "}
                 </p>
                 {/* Extra writing_excercise Info: Likes and Dislikes */}
-                <div className="btn-container">
+                <div className="button-container">
                   <Link
                     href="/[id]/editWritingExcercise"
                     as={`/${writing_excercise._id}/editWritingExcercise`}
                   >
-                    <button className="btn edit">Edit</button>
+                    <button className="edit">Edit</button>
                   </Link>
                   <Link
                     href="/[id]/viewWritingExc"
                     as={`/${writing_excercise._id}/viewWritingExc`}
                   >
-                    <button className="btn open">View</button>
+                    <button className="view-btn">View</button>
                   </Link>
                 </div>
               </div>

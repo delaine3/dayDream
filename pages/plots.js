@@ -39,12 +39,12 @@ const Index = ({ plot }) => {
                 <p className="label blurb">
                   Response: <span className="char-info">{plot.plot}</span>{" "}
                 </p>
-                <div className="btn-container">
+                <div className="button-container">
                   <Link href="/[id]/editPlot" as={`/${plot._id}/editPlot`}>
-                    <button className="btn edit">Edit</button>
+                    <button className="edit">Edit</button>
                   </Link>
                   <Link href="/[id]/viewPlot" as={`/${plot._id}/viewPlot`}>
-                    <button className="btn open">View</button>
+                    <button className="open">View</button>
                   </Link>
                 </div>
               </div>

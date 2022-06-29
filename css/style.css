@@ -28,18 +28,24 @@ nav {
   width: 100%;
   z-index: 999;
   border-radius: 3px;
-  height: 50px;
+  height: 45px;
+}
+#portfolio{
+  color: #ffffff;
+  margin: 0;
+}
+#portfolio:hover{
+  background-color: #58ffab8e;
 }
 nav a {
   top: 0px;
   font-size: 20px;
   padding: 11px;
-  border-right: #fdbeff solid 1px;
-  box-shadow: 0px 0px 10px 1px #acb8d1;
+  border-right: #ffffffa4 solid 1px;
   color: rgb(0, 0, 0);
   text-decoration: none;
-  background-color: #0cb6e0d7;
 }
+
 nav a:hover {
   color: #000000;
   background-color: rgba(76, 0, 255, 0.459);
@@ -77,13 +83,13 @@ nav a:hover {
 
 .page-title {
   text-align: center;
-  margin-bottom: 100px;
   font-size: 40px;
+  color: #614ecf;
+  margin-top: 0px;
 }
 
 .home:hover {
   margin: auto;
-
   border: 2px solid rgb(226, 43, 195);
   box-shadow: 0 0 10px 5px rgb(226, 43, 226);
   padding: 1%;
@@ -110,7 +116,6 @@ nav a:hover {
   --shadow: transparent;
   box-shadow: 0 0 10px 5px var(--shadow);
   position: relative;
-  font-size: 100%;
 }
 
 .card:hover {
@@ -155,15 +160,13 @@ nav a:hover {
   margin-top: 110px;
   float: center;
   padding: 5px;
-  background-color: #2afd2abb;
+  background-color: #27e727bb;
   box-shadow: 0 0 5px 5px #f1f1f1c5;
   border-radius: 10px;
   font-size: 20px;
 }
 .newFormButton:hover {
-  margin: 1%;
   float: center;
-  padding: 10px;
   background-color: #24d8abf5;
   border: 2px solid #ffffff;
   box-shadow: 0 0 5px 5px #f1f1f1c5;
@@ -171,12 +174,10 @@ nav a:hover {
 }
 .places_lived {
   color: rgb(0, 0, 0);
-  font-size: 110%;
 }
 
 .character-charachter_name {
   font-weight: bold;
-  font-size: 130%;
 }
 img {
   float: left;
@@ -190,13 +191,13 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
-h5.character-charachter_name {
-  color: white;
+h2.character-charachter_name {
+  color: black;
   position: absolute;
   left: 0;
   bottom: 0;
   padding: 10px;
-  text-shadow: 0px 0px 4px black;
+  text-shadow: 0px 1px 5px rgb(255, 255, 255);
 }
 
 .info ul {
@@ -232,26 +233,7 @@ li {
   border-radius: 10px;
   width: 40%;
 }
-.btn {
-  --accent: grey;
-  cursor: pointer;
-  background: transparent;
-  border: 1.5px solid var(--accent);
-  color: var(--accent);
-  border-radius: 10px;
-  padding: 10px 15px;
-  font-size: 90%;
-  letter-spacing: 1px;
-  transition: 0.5s all;
-  outline: none;
-}
 
-.btn:hover {
-  background: var(--accent);
-  color: white;
-}
-
-/* Delete Character */
 .character-container {
   width: 100%;
 }
@@ -292,7 +274,6 @@ li {
   margin: auto;
   box-shadow: 0 0 10px 5px var(--shadow);
   position: relative;
-  font-size: 100%;
 }
 
 .view-card:hover {
@@ -347,13 +328,7 @@ h2 {
   height: 80px;
   text-align: right;
 }
-#title {
-  position: absolute;
-  left: 20px;
-  top: 0;
-  display: inline-block;
-  height: 100%;
-}
+
 
 .info ul {
   padding: 10px;
@@ -376,35 +351,47 @@ li {
   font-weight: bold;
   text-align: center;
 }
-
-.btn-container {
+.character-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-container {
   display: flex;
   text-align: right;
 }
 .char-img {
-  margin-top: 100px;
+  margin-top: 120px;
+  height: 152px;
   margin-bottom: 5px;
-  border: 1.5px solid red;
-  width: 80%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
-.btn {
+.char-img img {
+  height: 150px;
+  width: 150px;
+}
+button {
+  background-color:rgb(255, 134, 249) ;
   cursor: pointer;
-  border: 1.5px solid var(--accent);
+  border: 1.5px solid var(background-color);
   color: #333;
   border-radius: 10px;
   padding: 5px;
-  font-size: 90%;
   letter-spacing: 1px;
   transition: 0.5s all;
   border: 2px solid #333;
+}
+button:hover{
+  color: white;
+  background-color:rgb(183, 60, 240) ;
 }
 .container {
   display: flex; /* or inline-flex */
   margin-top: 130px;
   margin-left: auto;
   margin-right: auto;
+  overflow-y: scroll;
 }
 #atrribution {
   position: fixed;
@@ -413,42 +400,41 @@ li {
   box-shadow: 0px 0px 5px #333, inset 0px 0px 2px #333;
   background-color: #acb8d154;
 }
-.btn:hover {
-  background-color: rgba(230, 182, 182, 0.699);
+.view-btn {
+  background-color: #9538ff;
+  color: white;
 }
-.open.btn:hover {
-  background-color: #fc26ea93;
+.view-btn:hover {
+  background-color: #c18efc;
+  outline: solid 2px #614ecf;
 }
-.button {
-  background-color: #ffb703;
+.edit {
+  background-color: #facc35;
+  outline: solid 2px #e4ad16;
 }
-.edit.btn {
-  --accent: #35fa50;
-  outline: solid 2px #0a9912;
-  margin: 10px;
-}
-.open.btn {
-  --accent: #f783b9;
-  outline: solid 2px #e213c6;
-  background-color: #fc26ceb6;
-  margin: 10px;
-}
-.delete.btn {
-  --accent: #f78383;
-  outline: solid 2px #cf4e4e;
-  margin: 10px;
+.edit:hover {
+  background-color: #ffd900;
 }
 
-.submit.btn {
-  --accent: #f783ed;
+.delete:hover{
+  background-color: #fd4a4a;
+}
+.delete{
+  background-color: #f78383;
+  outline: solid 2px #cf4e4e;
+}
+
+.submit button {
+  background-color: #f783ed;
   outline: solid 2px #cf4eba;
   margin: 10px;
   background-color: #f783ed;
 }
-.submit.btn:hover {
+.submit button:hover {
   padding: 3%;
   outline: solid 2px #ffffff;
 }
+
 /* Styles for Cards */
 .view-card-char {
   min-width: 300px;
@@ -460,21 +446,51 @@ li {
   background-color: rgba(255, 255, 255, 0.801);
   position: relative;
   overflow-x: hidden;
-  font-size: 100%;
 }
 @media only screen and (max-width: 600px) {
   .view-card-char {
     width: 300px;
   }
 }
-.view-card-writ:hover {
-  box-shadow: 0 0 10px 5px rgba(201, 9, 175, 0.973);
+.form-container{
+  margin-top: 100px;
 }
-
-p {
+.view {
+  margin-top: 150px;
+  border: #ffffff solid 1px;
+  width: 70%;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+}
+.portfolio {
+  top: 0;
+  float: right;
+  background-color: none;
+}
+.view-card-writ:hover {
+  box-shadow: 0 0 2px 2px rgba(161, 137, 158, 0.973);
+}
+.view-card-writ {
+  width: 300px;
+  height: 300px;
   padding: 5px;
+  margin: 3px;
+  border: #00000073 solid 2px;
+  border-radius: 16px;
+}
+p {
+  padding: 3px;
   background-color: rgba(240, 255, 255, 0.699);
   border: 2px solid #ffffff;
   box-shadow: 0 0 5px 5px #f1f1f1c5;
-  border-radius: 10px;
+  border-radius: 16px;
 }

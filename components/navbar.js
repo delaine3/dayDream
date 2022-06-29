@@ -10,11 +10,20 @@ export default function Navbar() {
         <Link href="/plots">
           <a className="nav-link">Plots</a>
         </Link>{" "}
+        <Link href="/writing_excercises">
+          <a className="nav-link">Writing Excercise</a>
+        </Link>{" "}
         <Link href="/characters">
           <a className="nav-link">Characters</a>
         </Link>{" "}
+        <a
+          id="portfolio"
+          className="nav-link"
+          href="https://delaine-abner-portfolio.vercel.app/"
+        >
+          Back to Portfolio
+        </a>
         <h1 className="page-title">Story Book</h1>
-
       </nav>
     </div>
   );

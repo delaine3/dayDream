@@ -98,36 +98,37 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
   };
 
   return (
-    <>
+    <div className="form-container" >
       <Form id={formId} onSubmit={handleSubmit}>
         <p>{form.plot_idea}</p>
         <button
-          className="newFormButton"
           name="plot_idea"
           onClick={handleChange}
         >
           New Writing Prompt
         </button>
-        <label htmlFor="plot">Submission</label>
-        <TextArea
-          style={{ minHeight: 300 }}
-          type="text"
-          name="plot"
-          value={form.plot}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit" className="btn submit">
-          Submit
-        </button>
-        <>{message != "" ? message : <></>}</>
-        <div>
-          {Object.keys(errors).map((err, index) => (
-            <li key={index}>{err}</li>
-          ))}
+        <div className="">
+          <label htmlFor="plot">Submission</label>
+          <TextArea
+            style={{ minHeight: 300 }}
+            type="text"
+            name="plot"
+            value={form.plot}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">
+            Submit
+          </button>
+          <>{message != "" ? message : <></>}</>
+          <div>
+            {Object.keys(errors).map((err, index) => (
+              <li key={index}>{err}</li>
+            ))}
+          </div>
         </div>
       </Form>
-    </>
+    </div>
   );
 };
 
