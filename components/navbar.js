@@ -23,7 +23,6 @@ export default function Navbar() {
         >
           Back to Portfolio
         </a>
-        <h1 className="page-title">Story Book</h1>
       </nav>
     </div>
   );
