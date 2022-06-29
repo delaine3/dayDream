@@ -6,7 +6,7 @@ body {
   height: 100%;
   padding: 0px;
   overflow-x: hidden;
-  background-image: radial-gradient(
+  background-image: linear-gradient(
     rgb(177, 165, 250),
     rgb(13, 245, 253),
     rgb(0, 140, 255)
@@ -22,19 +22,17 @@ body {
   box-sizing: border-box;
 }
 nav {
-  display: inline;
+  display: flexbox;
   position: fixed;
   margin-bottom: 10%;
   width: 100%;
   z-index: 999;
-  border-radius: 3px;
-  height: 45px;
 }
-#portfolio{
+#portfolio {
   color: #ffffff;
   margin: 0;
 }
-#portfolio:hover{
+#portfolio:hover {
   background-color: #58ffab8e;
 }
 nav a {
@@ -51,8 +49,6 @@ nav a:hover {
   background-color: rgba(76, 0, 255, 0.459);
 }
 .nav-bar {
-  top: 0px;
-  width: 100%;
 }
 
 .writing-excercises-icon-descriptor {
@@ -95,12 +91,6 @@ nav a:hover {
   padding: 1%;
   border-radius: 12px;
   background-color: rgb(207, 168, 243);
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 /* Styles for Cards */
@@ -184,12 +174,55 @@ img {
   position: relative;
   width: 100px;
   height: 100px;
+  margin: 20px;
   background-color: #d3d3d3;
 }
-.img-container {
-  width: 100px;
-  margin-right: auto;
-  margin-left: auto;
+.index-card {
+  width: 120px;
+  min-width: fit-content;
+  height: 250px;
+}
+.index-grid {
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .view-card-char {
+    width: 300px;
+  }
+  nav {
+    min-height: fit-content;
+    padding: 0px;
+  }
+  .nav-link {
+    padding: 3.5px;
+    font-size: 15px;
+    border-radius: 16px;
+    border: 1px white solid;
+    background-color: #24d8ab88;
+  }
+  .page-title{
+    margin: 50px;
+  }
+  #portfolio {
+    float: left;
+margin-top: 7px;
+padding: 5px;
+}
+}
+.img-container img {
+  float: left;
+}
+.char {
+  bottom: 50px;
+  padding: 10px;
+  margin-bottom: 30%;
+}
+.char button {
+  width: 130px;
+  height: 50px;
 }
 h2.character-charachter_name {
   color: black;
@@ -329,7 +362,6 @@ h2 {
   text-align: right;
 }
 
-
 .info ul {
   padding: 10px;
   padding-top: 0px;
@@ -351,7 +383,7 @@ li {
   font-weight: bold;
   text-align: center;
 }
-.character-container{
+.character-container {
   margin-left: auto;
   margin-right: auto;
 }
@@ -372,7 +404,7 @@ li {
   width: 150px;
 }
 button {
-  background-color:rgb(255, 134, 249) ;
+  background-color: rgb(255, 134, 249);
   cursor: pointer;
   border: 1.5px solid var(background-color);
   color: #333;
@@ -382,9 +414,9 @@ button {
   transition: 0.5s all;
   border: 2px solid #333;
 }
-button:hover{
+button:hover {
   color: white;
-  background-color:rgb(183, 60, 240) ;
+  background-color: rgb(183, 60, 240);
 }
 .container {
   display: flex; /* or inline-flex */
@@ -392,6 +424,12 @@ button:hover{
   margin-left: auto;
   margin-right: auto;
   overflow-y: scroll;
+}
+.index-container {
+  display: flexbox; /* or inline-flex */
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #atrribution {
   position: fixed;
@@ -416,10 +454,10 @@ button:hover{
   background-color: #ffd900;
 }
 
-.delete:hover{
+.delete:hover {
   background-color: #fd4a4a;
 }
-.delete{
+.delete {
   background-color: #f78383;
   outline: solid 2px #cf4e4e;
 }
@@ -447,12 +485,8 @@ button:hover{
   position: relative;
   overflow-x: hidden;
 }
-@media only screen and (max-width: 600px) {
-  .view-card-char {
-    width: 300px;
-  }
-}
-.form-container{
+
+.form-container {
   margin-top: 100px;
 }
 .view {
