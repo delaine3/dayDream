@@ -113,7 +113,8 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
   };
 
   return (
-    <>
+    <div className="char-form">
+      <p className="char-blurb">Fill in the form to create a character. If you require a name idea, click the button below.</p>
       <form className="newForm view" id={formId} onSubmit={handleSubmit}>
         <p id="nameIdea">
           {form.nameIdea != ""
@@ -239,13 +240,13 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
 
         <button type="submit">Submit</button>
       </form>
-      <p>{message}</p>
+      <div>{message}</div>
       <div>
         {Object.keys(errors).map((err, index) => (
           <li key={index}>{err}</li>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

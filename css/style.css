@@ -165,7 +165,32 @@ nav a:hover {
 .places_lived {
   color: rgb(0, 0, 0);
 }
-
+.char-blurb{
+  margin-top: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.char-form .view{
+  margin-top: 0;
+}
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+.plot .view{
+  margin-top: 5px;
+  min-width:300px ;
+}
+.plot p{
+  margin-top: 150px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .character-charachter_name {
   font-weight: bold;
 }
@@ -253,9 +278,10 @@ li {
   margin-top: 25px;
 }
 
-.label {
+label {
   font-weight: bold;
-  margin: 10px;
+  font-size: 20px;
+  text-align: center;
 }
 
 #nameIdea {
@@ -409,7 +435,8 @@ button {
   border: 1.5px solid var(background-color);
   color: #333;
   border-radius: 10px;
-  padding: 5px;
+  padding: 15px;
+  margin: 5px;
   letter-spacing: 1px;
   transition: 0.5s all;
   border: 2px solid #333;
@@ -492,8 +519,9 @@ button:hover {
 .view {
   margin-top: 150px;
   border: #ffffff solid 1px;
+  min-width: 330px;
   width: 70%;
-  height: 400px;
+  height: 450px;
   overflow-y: scroll;
   overflow-x: hidden;
   margin-left: auto;
@@ -518,6 +546,7 @@ button:hover {
   height: 300px;
   padding: 5px;
   margin: 3px;
+  background-color: #ffffffc4;
   border: #00000073 solid 2px;
   border-radius: 16px;
 }

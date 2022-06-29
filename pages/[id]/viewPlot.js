@@ -23,22 +23,21 @@ const PlotsPage = ({ plot }) => {
 
   return (
     <div key={plot._id}>
-      <div>
-        <div className="view">
-          <div>
-            <p className="label charachter_name">
-              Prompt:<span className="char-info">{plot.plot_idea}</span>
-            </p>
-            <p className="label places-lived">
-              Response: <span className="char-info">{plot.plot}</span>
-            </p>
-          </div>
-          <Link href="/[id]/editPlot" as={`/${plot._id}/editPlot`}>
-            <button className="edit">Edit</button>
-          </Link>
-          <button className="delete" onClick={handleDelete}>
-            Delete
-          </button>
+      <div className="plot">
+        <div className="plot">
+          <p className="label ">
+            Prompt: <br /> <span className="char-info">{plot.plot_idea}</span>
+          </p>
+          <label>Response</label>
+          <p className="view"> {plot.plot}</p>
+        </div>
+        <div className="btn-container">
+        <Link href="/[id]/editPlot" as={`/${plot._id}/editPlot`}>
+          <button className="edit">Edit</button>
+        </Link>
+        <button className="delete" onClick={handleDelete}>
+          Delete
+        </button>
         </div>
       </div>
       {message && <p>{message}</p>}
