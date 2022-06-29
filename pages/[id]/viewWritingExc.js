@@ -23,33 +23,23 @@ const WritingExcPage = ({ writing_excercise }) => {
 
   return (
     <div key={writing_excercise._id}>
-      <div>
-        <div className="view">
-          <div>
-            <p className="label charachter_name">
-              Prompt:
-              <span className="char-info">
-                {writing_excercise.randomWritingExcercise}
-              </span>
-            </p>
-            <p className="label places-lived">
-              Response:{" "}
-              <span className="char-info">
-                {writing_excercise.promt_text_area_contents}
-              </span>
-            </p>
-            <Link
-          href="/[id]/editWritingExcercise"
-          as={`/${writing_excercise._id}/editWritingExcercise`}
-        >
-          <button className="edit">Edit</button>
-        </Link>
-        <button className="delete" onClick={handleDelete}>
-          Delete
-        </button>
-          </div>
+      <div className="plot">
+        <p className="label ">
+          Prompt: <br /> <span>{writing_excercise.randomWritingExcercise}</span>
+        </p>
+        <label>Response: </label>
+        <p className="view">{writing_excercise.promt_text_area_contents}</p>
+        <div className="btn-container">
+          <Link
+            href="/[id]/editWritingExcercise"
+            as={`/${writing_excercise._id}/editWritingExcercise`}
+          >
+            <button className="edit">Edit</button>
+          </Link>
+          <button className="delete" onClick={handleDelete}>
+            Delete
+          </button>
         </div>
-       
       </div>
       {message && <p>{message}</p>}
     </div>

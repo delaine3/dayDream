@@ -121,7 +121,7 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
             ? form.nameIdea
             : "Create your charachter. If you need a name idea click the button below!"}
         </p>
-        <button name="nameIdea" className="open" onClick={handleChange}>
+        <button name="nameIdea" onClick={handleChange}>
           Name Idea
         </button>
         <label htmlFor="charachter_name">Character Name</label>

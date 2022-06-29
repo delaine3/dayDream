@@ -165,27 +165,28 @@ nav a:hover {
 .places_lived {
   color: rgb(0, 0, 0);
 }
-.char-blurb{
+.char-blurb {
   margin-top: 100px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-.char-form .view{
+.char-form .view {
   margin-top: 0;
+  min-width: 300px;
 }
-.btn-container{
+.btn-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50%;
   margin: auto;
 }
-.plot .view{
+.plot .view {
   margin-top: 5px;
-  min-width:300px ;
+  min-width: 300px;
 }
-.plot p{
+.plot p {
   margin-top: 150px;
   width: 80%;
   margin-left: auto;
@@ -197,15 +198,22 @@ nav a:hover {
 img {
   float: left;
   position: relative;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
+  width: 200px;
+  height: 200px;
+  margin: 0px;
   background-color: #d3d3d3;
 }
 .index-card {
-  width: 120px;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  min-width: fit-content;
+  margin: 2px;
   min-width: fit-content;
   height: 250px;
+}
+.index-card button{
+  margin: 0px;
 }
 .index-grid {
   margin-top: 150px;
@@ -228,14 +236,14 @@ img {
     border: 1px white solid;
     background-color: #24d8ab88;
   }
-  .page-title{
+  .page-title {
     margin: 50px;
   }
   #portfolio {
     float: left;
-margin-top: 7px;
-padding: 5px;
-}
+    margin-top: 7px;
+    padding: 5px;
+  }
 }
 .img-container img {
   float: left;
@@ -245,10 +253,7 @@ padding: 5px;
   padding: 10px;
   margin-bottom: 30%;
 }
-.char button {
-  width: 130px;
-  height: 50px;
-}
+
 h2.character-charachter_name {
   color: black;
   position: absolute;
@@ -285,12 +290,13 @@ label {
 }
 
 #nameIdea {
-  padding: 15px;
+  padding: 10px;
   background-color: #58ecff8e;
   border: 2px solid #42b0becc;
   box-shadow: 0 0 5px 5px #58ecffcc;
   border-radius: 10px;
-  width: 40%;
+  width: 90%;
+  text-align: center;
 }
 
 .character-container {
@@ -435,7 +441,7 @@ button {
   border: 1.5px solid var(background-color);
   color: #333;
   border-radius: 10px;
-  padding: 15px;
+  padding: 7px;
   margin: 5px;
   letter-spacing: 1px;
   transition: 0.5s all;

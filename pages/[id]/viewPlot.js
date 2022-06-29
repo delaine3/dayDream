@@ -24,13 +24,11 @@ const PlotsPage = ({ plot }) => {
   return (
     <div key={plot._id}>
       <div className="plot">
-        <div className="plot">
           <p className="label ">
-            Prompt: <br /> <span className="char-info">{plot.plot_idea}</span>
+            Prompt: <br /> <span >{plot.plot_idea}</span>
           </p>
           <label>Response</label>
           <p className="view"> {plot.plot}</p>
-        </div>
         <div className="btn-container">
         <Link href="/[id]/editPlot" as={`/${plot._id}/editPlot`}>
           <button className="edit">Edit</button>

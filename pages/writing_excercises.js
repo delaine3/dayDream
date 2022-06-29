@@ -46,7 +46,7 @@ const Index = ({ writing_excercise }) => {
                   </span>{" "}
                 </p>
                 {/* Extra writing_excercise Info: Likes and Dislikes */}
-                <div className="button-container">
+                <div className="btn-container">
                   <Link
                     href="/[id]/editWritingExcercise"
                     as={`/${writing_excercise._id}/editWritingExcercise`}
