@@ -6,11 +6,14 @@ const Index = ({ characters }) => (
   <div>
     <div className="index-grid">
       <div className="index-card">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/005/161/959/large_2x/cartoon-wild-animals-in-the-jungle-free-vector.jpg"
-          alt="charachter"
-          className="writing-excercises-icons"
-        />{" "}
+        <Link href="/characters">
+          <img
+            href="/characters"
+            src="https://static.vecteezy.com/system/resources/previews/005/161/959/large_2x/cartoon-wild-animals-in-the-jungle-free-vector.jpg"
+            alt="charachter"
+            className="writing-excercises-icons"
+          />
+        </Link>
         <Link href="/characters">
           <div className="char">
             <button>Character Creator</button>
@@ -18,11 +21,13 @@ const Index = ({ characters }) => (
         </Link>
       </div>{" "}
       <div className="index-card">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/000/142/632/large_2x/princesa-story-cartoon-free-vector.jpg"
-          alt="plot"
-          className="writing-excercises-icons"
-        />{" "}
+        <Link href="/plots">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/000/142/632/large_2x/princesa-story-cartoon-free-vector.jpg"
+            alt="plot"
+            className="writing-excercises-icons"
+          />
+        </Link>
         <br />
         <Link href="/plots">
           <div className="char">
@@ -31,11 +36,13 @@ const Index = ({ characters }) => (
         </Link>
       </div>{" "}
       <div className="index-card">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/000/214/921/original/vector-workplace-with-typewriter-illustration.jpg"
-          border="0"
-          className="writing-excercises-icons"
-        />{" "}
+        <Link href="/writing_excercises">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/000/214/921/original/vector-workplace-with-typewriter-illustration.jpg"
+            border="0"
+            className="writing-excercises-icons"
+          />
+        </Link>
         <Link href="/writing_excercises">
           <div className="char">
             {" "}
