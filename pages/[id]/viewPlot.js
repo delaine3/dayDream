@@ -27,8 +27,10 @@ const PlotsPage = ({ plot }) => {
           <p className="label ">
             Prompt: <br /> <span >{plot.plot_idea}</span>
           </p>
+          <label>Setting</label>
+          <p className=""> {plot.plot_setting}</p>
           <label>Response</label>
-          <p className="view"> {plot.plot}</p>
+          <p className=""> {plot.plot}</p>
         <div className="btn-container">
         <Link href="/[id]/editPlot" as={`/${plot._id}/editPlot`}>
           <button className="edit">Edit</button>

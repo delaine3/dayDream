@@ -13,6 +13,7 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
   const [form, setForm] = useState({
     plot: plotForm.plot,
     plot_idea: plotForm.plot_idea,
+    plot_setting:plotForm.plot_setting
   });
 
   /* The PUT method edits an existing entry in the mongodb database. */
@@ -117,6 +118,14 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
             type="text"
             name="plot"
             value={form.plot}
+            onChange={handleChange}
+            required
+          />
+             <TextArea
+            style={{ minHeight: 100 }}
+            type="text"
+            name="plot_setting"
+            value={form.plot_setting}
             onChange={handleChange}
             required
           />

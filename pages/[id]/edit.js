@@ -7,7 +7,7 @@ const fetcher = (url) =>
     .then((res) => res.json())
     .then((json) => json.data)
 
-const EditPet = () => {
+const EditCharacter = () => {
   const router = useRouter()
   const { id } = router.query
   const { data: character, error } = useSWR(id ? `/api/characters/${id}` : null, fetcher)
@@ -33,4 +33,4 @@ const EditPet = () => {
   return <CharacterForm formId="edit-character-form" characterForm={characterForm} forNewCharacter={false} />
 }
 
-export default EditPet
+export default EditCharacter

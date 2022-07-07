@@ -16,7 +16,8 @@ const EditPlot = () => {
   if (!writingExcercise) return <p>Loading...</p>
   const plotForm = {
     plot_idea:   writingExcercise.plot_idea,
-    plot: writingExcercise.plot
+    plot: writingExcercise.plot,
+    plot_setting: writingExcercise.plot_setting,
 
   }
 

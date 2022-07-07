@@ -11,6 +11,9 @@ const PlotSchema = new mongoose.Schema({
 
     type: String,
   },
+  plot_setting: {
+    type: String,
+  }
 
 
 

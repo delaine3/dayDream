@@ -37,6 +37,9 @@ const Index = ({ plot }) => {
                   Prompt: <span className="char-info">{plot.plot_idea}</span>
                 </p>
                 <p className="label blurb">
+                  Setting: <span className="char-info">{plot.plot_setting}</span>{" "}
+                </p>
+                <p className="label blurb">
                   Response: <span className="char-info">{plot.plot}</span>{" "}
                 </p>
                 <div className="btn-container">

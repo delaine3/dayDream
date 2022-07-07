@@ -28,7 +28,7 @@ const WritingExcPage = ({ writing_excercise }) => {
           Prompt: <br /> <span>{writing_excercise.randomWritingExcercise}</span>
         </p>
         <label>Response: </label>
-        <p className="view">{writing_excercise.promt_text_area_contents}</p>
+        <p className="">{writing_excercise.promt_text_area_contents}</p>
         <div className="btn-container">
           <Link
             href="/[id]/editWritingExcercise"
