@@ -110,7 +110,7 @@ const WritingExcerciseForm = ({
     <div className="char-form">
       <h1 id="page-title">Writing Excercise</h1>
       <Form id={formId} onSubmit={handleSubmit}>
-        <p className="char-blurb">
+        <p>
           Click the button below for a writing excercise prompt. Respond to it
           in the text area below.
         </p>

@@ -13,7 +13,7 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
   const [form, setForm] = useState({
     plot: plotForm.plot,
     plot_idea: plotForm.plot_idea,
-    plot_setting:plotForm.plot_setting
+    plot_setting: plotForm.plot_setting,
   });
 
   /* The PUT method edits an existing entry in the mongodb database. */
@@ -102,7 +102,7 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
     <div className="char-form">
       <h1 id="page-title">Plot</h1>
       <Form id={formId} onSubmit={handleSubmit}>
-        <p className="char-blurb">
+        <p>
           Write a plot in the text area below. If you require a plot idea, click
           the button below.
         </p>
@@ -112,7 +112,17 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
           New Writing Prompt
         </button>
         <div className="">
-          <label htmlFor="plot">Submission</label>
+          <label htmlFor="plot">Setting</label>
+
+          <TextArea
+            style={{ minHeight: 100 }}
+            type="text"
+            name="plot_setting"
+            value={form.plot_setting}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="plot">Plot</label>
           <TextArea
             style={{ minHeight: 300 }}
             type="text"
@@ -121,14 +131,7 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
             onChange={handleChange}
             required
           />
-             <TextArea
-            style={{ minHeight: 100 }}
-            type="text"
-            name="plot_setting"
-            value={form.plot_setting}
-            onChange={handleChange}
-            required
-          />
+
           <button type="submit">Submit</button>
           <>{message != "" ? message : <></>}</>
           <div>
