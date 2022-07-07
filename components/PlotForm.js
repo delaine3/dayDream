@@ -98,13 +98,16 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
   };
 
   return (
-    <div className="form-container" >
+    <div className="char-form">
+      <h1 id="page-title">Plot</h1>
       <Form id={formId} onSubmit={handleSubmit}>
+        <p className="char-blurb">
+          Write a plot in the text area below. If you require a plot idea, click
+          the button below.
+        </p>
+
         <p>{form.plot_idea}</p>
-        <button
-          name="plot_idea"
-          onClick={handleChange}
-        >
+        <button name="plot_idea" onClick={handleChange}>
           New Writing Prompt
         </button>
         <div className="">
@@ -117,9 +120,7 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
             onChange={handleChange}
             required
           />
-          <button type="submit">
-            Submit
-          </button>
+          <button type="submit">Submit</button>
           <>{message != "" ? message : <></>}</>
           <div>
             {Object.keys(errors).map((err, index) => (

@@ -114,6 +114,7 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
 
   return (
     <div className="char-form">
+      <h1 id="page-title">Character</h1>
       <p className="char-blurb">Fill in the form to create a character. If you require a name idea, click the button below.</p>
       <form className="newForm view" id={formId} onSubmit={handleSubmit}>
         <p id="nameIdea">

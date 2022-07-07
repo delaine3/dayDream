@@ -107,37 +107,40 @@ const WritingExcerciseForm = ({
   };
 
   return (
-    <div className="form-container">
+    <div className="char-form">
+      <h1 id="page-title">Writing Excercise</h1>
       <Form id={formId} onSubmit={handleSubmit}>
-        <div  >
-        <p>{form.randomWritingExcercise}</p>
-        <button
-          name="randomWritingExcercise"
-          onClick={handleChange}
-        >
-          New Writing Prompt
-        </button>
+        <p className="char-blurb">
+          Click the button below for a writing excercise prompt. Respond to it
+          in the text area below.
+        </p>
 
-        <label htmlFor="promt_text_area_contents">Submission</label>
-
-        <TextArea
-          style={{ minHeight: 300 }}
-          type="text"
-          name="promt_text_area_contents"
-          value={form.promt_text_area_contents}
-          onChange={handleChange}
-          required
-        />
-
-        <button type="submit" className="submit">
-          Submit
-        </button>
-
-        <>{message != "" ? message : <></>}</>
         <div>
-          {Object.keys(errors).map((err, index) => (
-            <li key={index}>{err}</li>
-          ))}
+          <p>{form.randomWritingExcercise}</p>
+          <button name="randomWritingExcercise" onClick={handleChange}>
+            New Writing Prompt
+          </button>
+
+          <label htmlFor="promt_text_area_contents">Submission</label>
+
+          <TextArea
+            style={{ minHeight: 300 }}
+            type="text"
+            name="promt_text_area_contents"
+            value={form.promt_text_area_contents}
+            onChange={handleChange}
+            required
+          />
+
+          <button type="submit" className="submit">
+            Submit
+          </button>
+
+          <>{message != "" ? message : <></>}</>
+          <div>
+            {Object.keys(errors).map((err, index) => (
+              <li key={index}>{err}</li>
+            ))}
           </div>
         </div>
       </Form>
