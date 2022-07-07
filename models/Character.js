@@ -11,13 +11,7 @@ const CharacterSchema = new mongoose.Schema({
     required: [true, 'Please provide a charachter_name for this character.'],
     maxlength: [20, 'Name cannot be more than 60 characters'],
   },
-  places_lived: {
-    /* The places_lived of this character */
 
-    type: String,
-    required: [true, "Please provide the character places_lived's charachter_name"],
-    maxlength: [20, "Places lived's Name cannot be more than 60 characters"],
-  },
   birth_place: {
     /* The birth_place of your character */
 

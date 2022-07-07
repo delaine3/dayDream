@@ -99,7 +99,7 @@ const WritingExcerciseForm = ({
     }
   };
 
-  /* Makes sure character info is filled for character charachter_name, places_lived charachter_name, birth_place, and image url*/
+  /* Makes sure character info is filled for character charachter_name, charachter_name, birth_place, and image url*/
   const formValidate = () => {
     let err = {};
 

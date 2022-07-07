@@ -17,7 +17,6 @@ const EditPet = () => {
 
   const characterForm = {
     charachter_name: character.charachter_name,
-    places_lived: character.places_lived,
     birth_place: character.birth_place,
     age: character.age,
     into_astrology: character.into_astrology,

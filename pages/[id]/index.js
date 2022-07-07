@@ -34,10 +34,6 @@ const PetPage = ({ character }) => {
             Character name:
             <span className="char-info">{character.charachter_name}</span>
           </p>
-          <p className="label places-lived">
-            Places lived:{" "}
-            <span className="char-info">{character.places_lived}</span>
-          </p>
           <p className="label age">
             Age:<span className="char-info">{character.age}</span>{" "}
           </p>

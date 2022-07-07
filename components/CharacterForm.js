@@ -10,7 +10,6 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
 
   const [form, setForm] = useState({
     charachter_name: characterForm.charachter_name,
-    places_lived: characterForm.places_lived,
     birth_place: characterForm.birth_place,
     age: characterForm.age,
     into_astrology: characterForm.into_astrology,
@@ -102,11 +101,10 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
     }
   };
 
-  /* Makes sure character info is filled for character charachter_name, places_lived charachter_name, birth_place, and image url*/
+  /* Makes sure character info is filled for character charachter_name, charachter_name, birth_place, and image url*/
   const formValidate = () => {
     let err = {};
     if (!form.charachter_name) err.charachter_name = "Name is required";
-    if (!form.places_lived) err.places_lived = "Places lived is required";
     if (!form.birth_place) err.birth_place = "Species is required";
     if (!form.image_url) err.image_url = "Image URL is required";
     return err;
@@ -131,16 +129,6 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
           maxLength="20"
           name="charachter_name"
           value={form.charachter_name}
-          onChange={handleChange}
-          required
-        />
-
-        <label htmlFor="places-lived">Places Lived</label>
-        <input
-          type="text"
-          maxLength="20"
-          name="places-lived"
-          value={form.places_lived}
           onChange={handleChange}
           required
         />

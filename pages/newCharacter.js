@@ -3,7 +3,6 @@ import CharacterForm from '../components/CharacterForm'
 const NewCharacter = () => {
   const characterForm = {
     charachter_name: '',
-    places_lived: '',
     birth_place: '',
     age: 0,
     into_astrology: false,
