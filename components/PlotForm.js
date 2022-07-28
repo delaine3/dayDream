@@ -109,7 +109,8 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
 
         <p>{form.plot_idea}</p>
         <button name="plot_idea" onClick={handleChange}>
-          New Writing Prompt
+          New Writing Prompt]
+          
         </button>
         <div className="">
           <label htmlFor="plot">Setting</label>
@@ -126,7 +127,7 @@ const PlotForm = ({ formId, plotForm, forNewPlot = true }) => {
           <TextArea
             style={{ minHeight: 300 }}
             type="text"
-            name="plot"
+            name="plot" 
             value={form.plot}
             onChange={handleChange}
             required

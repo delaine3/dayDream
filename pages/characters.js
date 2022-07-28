@@ -45,12 +45,7 @@ const Index = ({ characters }) => (
       ))}
     </div>
     <br />
-    <div id="atrribution">
-      Image Attribution{" "}
-      <a href="https://www.vecteezy.com/free-vector/black-woman">
-        Black Woman Vectors by Vecteezy
-      </a>
-    </div>
+  
   </div>
 );
 
