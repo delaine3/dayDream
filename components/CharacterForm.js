@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { mutate } from "swr";
 import { name_list } from "../lib/nameIdeaList";
+
 const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
   const router = useRouter();
   const contentType = "application/json";
@@ -105,7 +106,7 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
   const formValidate = () => {
     let err = {};
     if (!form.charachter_name) err.charachter_name = "Name is required";
-    if (!form.birth_place) err.birth_place = "Species is required";
+    if (!form.birth_place) err.birth_place = "Birth place is required";
     if (!form.image_url) err.image_url = "Image URL is required";
     return err;
   };
@@ -113,7 +114,10 @@ const CharacterForm = ({ formId, characterForm, forNewCharacter = true }) => {
   return (
     <div className="char-form">
       <h1 id="page-title">Character</h1>
-      <p className="char-blurb">Fill in the form to create a character. If you require a name idea, click the button below.</p>
+      <p className="char-blurb">
+        Fill in the form to create a character. If you require a name idea,
+        click the button below.
+      </p>
       <form className="newForm view" id={formId} onSubmit={handleSubmit}>
         <p id="nameIdea">
           {form.nameIdea != ""
