@@ -5,22 +5,18 @@ export default function Navbar() {
     <div className="nav-bar">
       <nav>
         <Link href="/">
-          <a className="nav-link">Home</a>
+          <a>Home</a>
         </Link>{" "}
         <Link href="/plots">
-          <a className="nav-link">Plots</a>
+          <a>Plots</a>
         </Link>{" "}
         <Link href="/writing_excercises">
-          <a className="nav-link">Writing Excercise</a>
+          <a>Writing Excercise</a>
         </Link>{" "}
         <Link href="/characters">
-          <a className="nav-link">Characters</a>
+          <a>Characters</a>
         </Link>{" "}
-        <a
-          id="portfolio"
-          className="nav-link"
-          href="https://delaine-abner-portfolio.vercel.app/"
-        >
+        <a id="portfolio" href="https://delaine-abner-portfolio.vercel.app/">
           Back to Portfolio
         </a>
       </nav>

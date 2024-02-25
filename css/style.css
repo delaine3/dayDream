@@ -216,7 +216,7 @@ img {
   margin: 0px;
 }
 .index-grid {
-  margin-top: 150px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -308,7 +308,6 @@ label {
 
 .char-info {
   font-weight: lighter;
-  margin-right: 20px;
 }
 
 .blurb {
@@ -434,6 +433,15 @@ li {
   height: 150px;
   width: 150px;
 }
+.container {
+  margin-top: auto;
+  margin-bottom: 20px;
+  min-width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
 button {
   background-color: rgb(255, 134, 249);
   cursor: pointer;
@@ -450,25 +458,35 @@ button:hover {
   color: white;
   background-color: rgb(183, 60, 240);
 }
-.container {
-  display: flex; /* or inline-flex */
-  margin-top: 130px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-y: scroll;
+.snap-to-bottom {
+  margin-top: auto;
+  margin-bottom: 20px;
+  min-width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+.container2 {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-top: 10px;
+  margin-right: 10%;
+}
+.title {
+  margin-top: 5%;
 }
 .index-container {
-  display: flexbox; /* or inline-flex */
+  display: flexbox;
   margin-top: 130px;
   margin-left: auto;
   margin-right: auto;
 }
-#atrribution {
+#attrribution {
   position: fixed;
   bottom: 0;
-  padding: 10px;
-  box-shadow: 0px 0px 5px #333, inset 0px 0px 2px #333;
-  background-color: #acb8d154;
+  left: 0;
 }
 .view-btn {
   background-color: #9538ff;
@@ -556,10 +574,21 @@ button:hover {
   border: #00000073 solid 2px;
   border-radius: 16px;
 }
+
 p {
-  padding: 1px;
+  padding: 10px;
   background-color: rgba(240, 255, 255, 0.699);
   border: 2px solid #ffffff;
   box-shadow: 0 0 2px 2px #f1f1f1c5;
   border-radius: 16px;
+}
+
+.prompt-container {
+  margin: 10px;
+  height: 70px;
+}
+
+.response-container {
+  margin: 10px;
+  height: 100px;
 }

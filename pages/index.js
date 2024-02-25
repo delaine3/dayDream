@@ -1,9 +1,31 @@
 import Link from "next/link";
 import dbConnect from "../lib/dbConnect";
 import Character from "../models/Writing_Excercise";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Index = ({ characters }) => (
   <div>
+    <h1 className="title">Day Dream</h1>
+    <p className="container2">
+      Daydream is your secret diary and imaginative playground, all tucked away
+      in your pocket. Picture this: you're under an old oak tree, notebook in
+      lap, ideas flowing like a gentle stream. That's Daydream for you—a blend
+      of magic and creativity, ready to capture your stories. <br />
+      <br />
+      Dive into writing with prompts that nudge your creativity, crafting tales
+      from whispers of imagination. Daydream lets you breathe life into your
+      characters, giving them stories, quirks, and even faces with images. It's
+      your very own creative tea party, where each character is eager to spill
+      their secrets. <br />
+      Embrace the challenge with writing exercises that are as fun as playground
+      games, sharpening your skills on a whimsical journey through words.
+      Daydream is born from a love of storytelling, designed to be your muse,
+      confidant, and companion on a journey of creative exploration. <br />
+      <br />
+      Join us on this adventure with Daydream, and let's fill the pages of our
+      lives with the stories that dance in our hearts.
+    </p>
+
     <div className="index-grid">
       <div className="index-card">
         <Link href="/characters">
@@ -51,7 +73,7 @@ const Index = ({ characters }) => (
         </Link>
       </div>
     </div>
-    <div id="atrribution">
+    <div id="attrribution">
       Image Attribution: <br />
       <a href="https://www.vecteezy.com/free-vector/writing">
         Writing Vectors by Vecteezy
